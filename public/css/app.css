@@ -47,7 +47,6 @@
 
 html {
     font-family: sans-serif;
-    line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -66,13 +65,77 @@ section {
 }
 
 body {
+    font-weight: 200;
+    height: 100vh;
     margin: 0;
-    font-family: "Nunito", sans-serif;
-    font-size: 0.9rem;
-    font-weight: 400;
-    line-height: 1.6;
-    color: #212529;
-    text-align: left;
+}
+
+.fondo {
+    background-image: url('../image/isiucolombia.jpg');
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    z-index: auto;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+}
+
+.fondo:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(45, 49, 25, 0.4);
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 300%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.links>a {
+    color: #ffffff;
+    padding: 0 25px;
+    text-align: center !important;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
 }
 
 [tabindex="-1"]:focus {
@@ -170,13 +233,17 @@ sup {
 }
 
 a {
-    color: #3490dc;
+    color: #ffffff;
     text-decoration: none;
     background-color: transparent;
+    position: relative;
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 0px 0px 8px !important;
 }
 
 a:hover {
-    color: #1d68a7;
+    color: #0a1620;
     text-decoration: underline;
 }
 
@@ -373,6 +440,46 @@ template {
     display: none;
 }
 
+.img-responsive-redulac {
+    width: 20% !important;
+    height: 30% !important;
+    position: relative;
+    margin: 0 10px;
+}
+
+.img-responsive-ungrd {
+    width: 12% !important;
+    height: 6% !important;
+    position: relative;
+    margin: 0 10px;
+}
+
+.img-responsive-usaid {
+    width: 15% !important;
+    height: 15% !important;
+    position: relative;
+    margin: 0 10px;
+}
+
+.img-responsive-csuca {
+    width: 5.7% !important;
+    height: 6% !important;
+    margin: 0 10px;
+    position: relative;
+}
+
+.img-responsive-uniquindio {
+    width: 6% !important;
+    height: 6% !important;
+    position: relative;
+    margin: 0 10px;
+}
+
+.logo-isiu {
+    width: 10% !important;
+    height: 20% !important;
+}
+
 [hidden] {
     display: none !important;
 }
@@ -388,15 +495,20 @@ h6,
 .h3,
 .h4,
 .h5,
-.h6 {
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    line-height: 1.2;
+.h6 .fondo {
+    color: white;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    font-size: 2.25rem;
+    margin: 0px 0px 8px !important;
 }
 
 h1,
 .h1 {
     font-size: 2.25rem;
+    position: relative;
+    text-align: center;
 }
 
 h2,
@@ -417,6 +529,8 @@ h4,
 h5,
 .h5 {
     font-size: 1.125rem;
+    position: relative;
+    text-align: center;
 }
 
 h6,
@@ -2987,7 +3101,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-link:hover {
-    color: #1d68a7;
+    color: #ffffff;
     text-decoration: underline;
 }
 
@@ -4169,12 +4283,14 @@ input[type=button].btn-block {
 }
 
 .navbar {
+    top: 2% !important;
     position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
+    padding: 0.0rem 1rem;
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .navbar>.container,
@@ -4250,8 +4366,6 @@ input[type=button].btn-block {
     height: 1.5em;
     vertical-align: middle;
     content: "";
-    background: no-repeat center center;
-    background-size: 100% 100%;
 }
 
 @media (max-width: 575.98px) {
