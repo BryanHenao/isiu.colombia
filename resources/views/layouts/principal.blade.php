@@ -29,7 +29,7 @@
                     @else
                         <a href="#">CONTACTO</a>
                         <a href="{{ route('login') }}">INICIAR SESION</a>
-                        <a href="{{ route('login') }}">INICIAR SESION</a>
+
 
 <!--                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
@@ -48,5 +48,8 @@
         </div>
 
     </body>
+
+    <script src="{{asset('../js/app.js')}}"></script>
+
     
 </html>

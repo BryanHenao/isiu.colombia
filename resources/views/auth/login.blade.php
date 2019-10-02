@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.principal')
 
 @section('content')
-<div class="container">
+<!-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -68,6 +68,52 @@
                 </div>
             </div>
         </div>
+    </div>
+</div> -->
+
+<div class="row justify-content-center">
+    <div class="col-md-20">
+        <div class="card">
+            <div style="text-align:center;">
+                <b>INICIO SESION EVALUADOR</b>
+            </div>
+            <br><br>
+            <form class="container-fluid" method="POST" action="{{ route('login') }}" id="loginForm"> 
+                @csrf
+                <div class="form-group">
+                    <label for="categoria"><b>Correo electrónico:</b></label>
+                    <input id="email" type="email" class="form-control form-control-sm{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+
+                    @if ($errors->has('email'))
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $errors->first('email') }}</strong>
+                        </span>
+                    @endif
+                </div> 
+
+                <div class="form-group">
+                    <label for="categoria"><b>Contraseña:</b></label>
+                    <input id="password" type="password" class="form-control form-control-sm{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                    @if ($errors->has('password'))
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $errors->first('password') }}</strong>
+                        </span>
+                    @endif
+                </div> 
+
+                <br>
+
+                <p>¿Aun no eres evaluador?  <a style="color: #039271;" href="#"><b>Contactanos</b></a></p>
+
+                <br>
+                
+                <div class="float-right">
+                    <button type="submit" style="background-color: #039271;" class=" btn-light btn-lg btn-block">Ingresar</button>
+                </div>
+            </form> 
+        </div>
+
+        <br><br>
     </div>
 </div>
 @endsection
